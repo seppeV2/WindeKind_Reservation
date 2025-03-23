@@ -54,16 +54,13 @@ def is_late_return(rental_time_str, rental_duration):
 
     rental_time = datetime.strptime(rental_time_str, '%Y-%m-%d %H:%M:%S')
     planned_duration = float(rental_duration)*60 #in minutes
-    print(planned_duration)
     
     real_duration_raw = (datetime.now() - rental_time) #In minutes
     real_duration = real_duration_raw.days * (24*60) + real_duration_raw.seconds//60
-    print(real_duration)
 
     late = real_duration > planned_duration
     minutes_late = real_duration - planned_duration if late else None
 
-    print(late, minutes_late)
     return late, minutes_late
 
 def get_end_time(timestamp_str, duration):
