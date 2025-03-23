@@ -1,4 +1,4 @@
-def get_html(endpoint):
+def get_html(endpoint, width):
 
   string = """
   <html>
@@ -11,7 +11,7 @@ def get_html(endpoint):
       body {
         font-family: 'Ropa Sans', sans-serif;
         color: #333;
-        max-width: 640px;
+        max-width: """+str(width)+"""px;
         margin: 0 auto;
         position: relative;
       }
@@ -10198,7 +10198,7 @@ def get_html(endpoint):
             if (now - previous_send > 1000) {
               previous_send = now;
               
-              fetch('"""+endpoint+"""/qr_receive', {
+              fetch('"""+endpoint+"""/25403b32-2720-4e16-a651-f53fdf83e99c/in', {
                   method: 'POST',
                   body: code.data
               }).catch(error => console.error("Error sending frame: ", error))
@@ -10212,6 +10212,5 @@ def get_html(endpoint):
   </body>
   </html>
   """
-  print(string)
 
   return string

@@ -1,0 +1,38 @@
+{
+    "1" : {
+        "type" : "Board",
+        "brand" : "Duotone"
+    },
+    "2" : {
+        "type" : "SUP",
+        "brand" : "IROCKER"
+    },
+    "3" : {
+        "type" : "MEGA_SUP",
+        "brand" : "MOAI"
+    },
+    "4" : {
+        "type" : "Board",
+        "brand" : "Duotone"
+    },
+    "5" : {
+        "type" : "SUP",
+        "brand" : "IROCKER"
+    },
+    "6" : {
+        "type" : "MEGA_SUP",
+        "brand" : "MOAI"
+    },
+    "7" : {
+        "type" : "Board",
+        "brand" : "Duotone"
+    },
+    "8" : {
+        "type" : "SUP",
+        "brand" : "IROCKER"
+    },
+    "9" : {
+        "type" : "MEGA_SUP",
+        "brand" : "MOAI"
+    }
+}

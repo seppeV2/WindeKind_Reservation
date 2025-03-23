@@ -1,4 +1,4 @@
-# Reservation app
+# Opensvflet app
 
 ## Run the app
 
