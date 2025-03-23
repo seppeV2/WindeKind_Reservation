@@ -47,7 +47,7 @@ async def store_qr_code(request: Request):
 def main(_page: ft.Page):
     global page
     page = _page
-    page.endpoint = page.url.replace('ws://', 'https://')
+    page.endpoint = page.url.replace('wss://', 'https://')
     print(page.endpoint)
     page.material_catalog = get_materials()
 
