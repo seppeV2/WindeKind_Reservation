@@ -11,7 +11,7 @@ def get_home_view(page: ft.Page):
         route='/',
         appbar= ft.AppBar(
             leading = ft.Text(),
-            title=ft.Text("Windekind material rental management", size=page.sizes['appbar_text_size'], weight=page.sizes['appbar_font_weight']),
+            title=ft.Text("Windekind", size=page.sizes['appbar_text_size'], weight=page.sizes['appbar_font_weight']),
             center_title=True,
             bgcolor=ft.Colors.GREEN_200
         ),
