@@ -85,8 +85,9 @@ def get_camera_web_view(page, endpoint, debug = True):
             enable_javascript=True,
         ),
         width=square_size,
-        height=square_size,
-        border=ft.border.all(width= 4, color=ft.Colors.BLACK)
+        expand=True,
+        #height=square_size,
+        #border=ft.border.all(width= 4, color=ft.Colors.BLACK)
 
 
     ) if not debug else ft.Placeholder(

@@ -7,30 +7,31 @@ def get_html(endpoint, width):
     <title>jsQR Demo</title>
     <script src="./jsQR.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Ropa+Sans" rel="stylesheet">
-    <style>
+    <style>html, body {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: black;
+      }
+
       body {
         font-family: 'Ropa Sans', sans-serif;
         color: #333;
-        width: """+str(width)+"""px;
-        margin: 0 auto;
-        position: relative;
-      }
-
-      #githubLink {
-        position: absolute;
-        right: 0;
-        top: 12px;
-        color: #2D99FF;
-      }
-
-      h1 {
-        margin: 10px 0;
-        font-size: 40px;
+        border: 5px solid black; /* Black border around everything */
+        display: flex;
+        justify-content: center;
+        align-items: center;
       }
 
       #canvas {
-        width: 100%;
-        height: 100%;
+        width: """+str(width-10)+"""px;
+        height: auto;
+        display: block;
+        max-height: 100vh; /* Prevents overflow */
       }
 
       #output {
@@ -48,6 +49,7 @@ def get_html(endpoint, width):
       #noQRFound {
         text-align: center;
       }
+
     </style>
   </head>
   <body>
