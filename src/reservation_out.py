@@ -10,20 +10,22 @@ def go_to_reservation_out(page: ft.Page):
             appbar= ft.AppBar(
                 leading= ft.IconButton(
                     icon=ft.Icons.ARROW_BACK_IOS,
+                    icon_color=ft.Colors.BLACK, 
+                    icon_size=page.sizes['main_button_icon_size'],
                     on_click=lambda _: pop_view(page)
                     ),
-                title=ft.Text("Windekind rental out", size=40),
-                center_title=True
+                title=ft.Text("Windekind rental out", size=page.sizes['appbar_text_size'],weight=page.sizes['appbar_font_weight']),
+                center_title=True,
+                bgcolor=ft.Colors.GREEN_200
+
             ),
             controls=[
                 ft.Row(
                     controls = [
                         ft.Row(
                             controls = [
-                                ft.Text("Contact Person:"),
-                                contactPerson := ft.TextField(label= 'Name'),
-                                ft.Text("Duration:"),
-                                hoursInput := ft.TextField(label= 'hours')
+                                contactPerson := ft.TextField(label= 'Contact Person', width=page.sizes['text_field_width_contact'], text_size=page.sizes['normal'], label_style=ft.TextStyle(size = page.sizes['normal'])),
+                                hoursInput := ft.TextField(label= 'Duration',width=page.sizes['text_field_width_duration'], text_size=page.sizes['normal'], label_style=ft.TextStyle(size = page.sizes['normal']))
                             ]
                         ),
                         ft.TextButton(
@@ -36,7 +38,8 @@ def go_to_reservation_out(page: ft.Page):
                 ),
                 get_camera_web_view(page, page.endpoint, debug=False),
                 ft.ListView(
-                    data=[]
+                    data=[],
+                    expand=True
                 )
             ],
             horizontal_alignment= ft.CrossAxisAlignment.CENTER

@@ -10,10 +10,13 @@ def go_to_reservation_in(page: ft.Page):
             appbar= ft.AppBar(
                 leading= ft.IconButton(
                     icon=ft.Icons.ARROW_BACK_IOS,
+                    icon_size=page.sizes['main_button_icon_size'],
+                    icon_color=ft.Colors.BLACK, 
                     on_click=lambda _: pop_view(page)
                     ),
-                title=ft.Text("Windekind rental in", size=40),
-                center_title=True
+                title=ft.Text("Windekind rental in", size=page.sizes['appbar_text_size'], weight=page.sizes['appbar_font_weight']),
+                center_title=True,
+                bgcolor=ft.Colors.GREEN_200
             ),
             controls=[
                 ft.TextButton(
@@ -23,7 +26,8 @@ def go_to_reservation_in(page: ft.Page):
                 ),
                 get_camera_web_view(page, page.endpoint, debug=False),
                 ft.ListView(
-                    data = []
+                    data = [],
+                    expand=True
                 )
             ], 
             horizontal_alignment= ft.CrossAxisAlignment.CENTER

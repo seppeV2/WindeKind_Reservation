@@ -11,7 +11,7 @@ def get_html(endpoint, width):
       body {
         font-family: 'Ropa Sans', sans-serif;
         color: #333;
-        max-width: """+str(width)+"""px;
+        width: """+str(width)+"""px;
         margin: 0 auto;
         position: relative;
       }
@@ -30,6 +30,7 @@ def get_html(endpoint, width):
 
       #canvas {
         width: 100%;
+        height: 100%;
       }
 
       #output {
